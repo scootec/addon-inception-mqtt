@@ -18,10 +18,10 @@ if ! bashio::fs.file_exists '/config/inception-mqtt/configuration.yml'; then
         bashio::exit.nok "Could not create configuration.yml."
 fi
 
-# Links /opt/inception-mqtt/.config to /config/inception-mqtt
-if ! bashio::fs.directory_exists '/opt/inception-mqtt/.config'; then
-    bashio::log "Linking /opt/inception-mqtt/.config to /config/inception-mqtt."
-    ln -s /config/inception-mqtt /opt/inception-mqtt/.config ||
+# Links /opt/inception-mqtt/config to /config/inception-mqtt
+if ! bashio::fs.directory_exists '/opt/inception-mqtt/config'; then
+    bashio::log "Linking /opt/inception-mqtt/config to /config/inception-mqtt."
+    ln -s /config/inception-mqtt /opt/inception-mqtt/config ||
         bashio::exit.nok "Could not create symbolic link."
 fi
 
