@@ -20,4 +20,4 @@ cd /opt/inception-mqtt || bashio::exit.nok "Could not change directory to incept
 
 bashio::log.info 'Starting Inner Range Inception to MQTT...'
 
-exec node index.js
+exec node ./dist/index.js
