@@ -2,7 +2,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.2.5
 FROM ${BUILD_FROM}
 
 # Set inception-mqtt Committ. Needs to be after FROM
-ARG INCEPTION-MQTT_COMMIT="a17f34f"
+ARG INCEPTION_MQTT_COMMIT="a17f34f"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -18,7 +18,7 @@ RUN apk add --no-cache --virtual .build-dependencies \
 # Create work dir. Download latest release. Remove unnecessary directories.
 RUN mkdir -p /opt/inception-mqtt \
     && cd /opt/inception-mqtt \
-    && curl -sL "https://github.com/matthew-larner/inception-mqtt/tarball/${INCEPTION-MQTT_COMMIT}" \
+    && curl -sL "https://github.com/matthew-larner/inception-mqtt/tarball/${INCEPTION_MQTT_COMMIT}" \
     -o "release.tar.gz" \
     && tar -xzvf "release.tar.gz" --strip-components=1 \
     && npm ci \
