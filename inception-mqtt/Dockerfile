@@ -1,30 +1,24 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.2.5
 FROM ${BUILD_FROM}
 
-# Set Zigbee2MQTT Version. Needs to be after FROM
-ARG ZIGBEE2MQTT_VERSION=1.28.1
+# Set inception-mqtt Committ. Needs to be after FROM
+ARG INCEPTION-MQTT_COMMIT=a17f34f
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
 RUN apk add --no-cache --virtual .build-dependencies \
-    g++ \
-    gcc \
-    git \
-    linux-headers \
-    make \
-    python3-dev \
-    eudev \
+    # git \
     npm \
     \
     && apk add --no-cache \
     nodejs
 
 # Create work dir. Download latest release. Remove unnecessary directories.
-RUN mkdir -p /opt/zigbee2mqtt \
-    && cd /opt/zigbee2mqtt \
-    && curl -sL "https://github.com/Koenkk/zigbee2mqtt/archive/${ZIGBEE2MQTT_VERSION}.tar.gz" \
+RUN mkdir -p /opt/inception-mqtt \
+    && cd /opt/inception-mqtt \
+    && curl -sL "https://github.com/matthew-larner/inception-mqtt/tarball/${INCEPTION-MQTT_COMMIT}" \
     -o "release.tar.gz" \
     && tar -xzvf "release.tar.gz" --strip-components=1 \
     && npm ci \
@@ -55,20 +49,20 @@ ARG BUILD_VERSION
 
 # Labels
 LABEL \
-    io.hass.name="Zigbee2MQTT" \
+    io.hass.name="Inner Range Inception to MQTT" \
     io.hass.description="" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Shane Scott" \
-    org.opencontainers.image.title="Zigbee2MQTT" \
-    org.opencontainers.image.description="Zigbee to MQTT bridge." \
+    org.opencontainers.image.title="Inner Range Inception to MQTT" \
+    org.opencontainers.image.description="Inner Range Inception to MQTT bridge." \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
     org.opencontainers.image.authors="Shane Scott" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/scootec/addon-zigbee2mqtt" \
-    org.opencontainers.image.source="https://github.com/scootec/addon-zigbee2mqtt" \
-    org.opencontainers.image.documentation="https://github.com/scootec/addon-zigbee2mqtt" \
+    org.opencontainers.image.url="https://github.com/scootec/addon-inception-mqtt" \
+    org.opencontainers.image.source="https://github.com/scootec/addon-inception-mqtt" \
+    org.opencontainers.image.documentation="https://github.com/scootec/addon-inception-mqtt" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}

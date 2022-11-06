@@ -1,4 +1,4 @@
-# Community Hass.io Add-ons: Zigbee2mqtt
+# Community Hass.io Add-ons: Inner Range Inception to MQTT
 
 <!-- [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -16,7 +16,7 @@
 
 [![Support my work on Patreon][patreon-shield]][patreon] -->
 
-Zigbee2mqtt add-on by Community Hass.io add-ons.
+Inner Range Inception to MQTT add-on by Community Hass.io add-ons.
 
 ![Zigbee2mqtt Logo](images/logo.png)
 
@@ -136,12 +136,12 @@ functionality. The format of the log is based on
 [Keep a Changelog][keepchangelog].
 
 Releases are based on [Semantic Versioning][semver], and use the format
-of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
+of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
 based on the following:
 
-- ``MAJOR``: Incompatible or major changes.
-- ``MINOR``: Backwards-compatible new features and enhancements.
-- ``PATCH``: Backwards-compatible bugfixes and package updates.
+- `MAJOR`: Incompatible or major changes.
+- `MINOR`: Backwards-compatible new features and enhancements.
+- `PATCH`: Backwards-compatible bugfixes and package updates.
 
 ## Support
 
