@@ -11,7 +11,7 @@ if ! bashio::fs.directory_exists '/config/inception-mqtt/.config'; then
         bashio::exit.nok "Could not create /config/inception-mqtt."
 fi
 
-Creates configuration.yml on first start.
+# Creates configuration.yml on first start.
 if ! bashio::fs.file_exists '/config/inception-mqtt/.config/configuration.yml'; then
     bashio::log.info "Creating configuration.yaml..."
     touch /config/inception-mqtt/.config/configuration.yml ||

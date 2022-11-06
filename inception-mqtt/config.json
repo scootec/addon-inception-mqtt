@@ -1,6 +1,6 @@
 {
   "name": "Inner Range Inception to MQTT",
-  "version": "0.4",
+  "version": "0.5",
   "slug": "inception-mqtt",
   "description": "Inner Range Inception to MQTT add-on by Scootec",
   "url": "https://github.com/scoootec/addon-inception-mqtt",
