@@ -18,14 +18,14 @@
 
 Inner Range Inception to MQTT add-on by Community Hass.io add-ons.
 
-![Zigbee2mqtt Logo](images/logo.png)
+![Inception Logo](images/logo.png)
 
 ## About
 
 Hass.io-addon based on the fantastic work by frenck and danielwelch.
 
-Zigbee2mqtt bridges events and allows you to control your Zigbee devices via MQTT.
-In this way you can integrate your Zigbee devices with whatever smart home
+Inner Range Inception to MQTT bridges events and allows you to control your Inception devices via MQTT.
+In this way you can integrate your Inception devices with whatever smart home
 infrastructure you are using.
 
 <!-- ## Installation
@@ -34,9 +34,9 @@ The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
 1. [Add our Hass.io add-ons repository][repository] to your Hass.io instance.
-1. Install the "Zigbee2mqtt" add-on
-1. Start the "Zigbee2mqtt" add-on
-1. Check the logs of the "Zigbee2mqtt" add-on to see it in action.
+1. Install the "Inner Range Inception to MQTT" add-on
+1. Start the "Inner Range Inception to MQTT" add-on
+1. Check the logs of the "Inner Range Inception to MQTT" add-on to see it in action.
 
 **NOTE**: Do not add this repository to Hass.io, please use:
 `https://github.com/hassio-addons/repository`.
