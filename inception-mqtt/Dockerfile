@@ -1,8 +1,8 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.2.5
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:14.0.0
 FROM ${BUILD_FROM}
 
 # Set inception-mqtt Committ. Needs to be after FROM
-ARG INCEPTION_MQTT_COMMIT="a17f34f"
+ARG INCEPTION_MQTT_COMMIT="f0908fd"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
